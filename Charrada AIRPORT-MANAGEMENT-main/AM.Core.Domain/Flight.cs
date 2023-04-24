@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,10 @@ namespace AM.Core.Domain
         public DateTime EffectiveArrival { get; set; }
         public int EstimatedDuration { get; set; }
         //les realtions !
+
+        [ForeignKey("MyPlane")]
+        public int? PlaneId { get; set; } //prop
+
         public Plane MyPlane { get; set; }//many to one
         public IList<Passenger> passengers { get; set; }//many to many
 
@@ -30,7 +35,5 @@ namespace AM.Core.Domain
 
         //tp3 q7
         public string Comment { get; set; } //9ali zidha
-
-
     }
 }

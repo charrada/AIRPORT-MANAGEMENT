@@ -1,4 +1,5 @@
 ﻿using AM.Core.Domain;
+using AM.Data.Configurations;
 using Microsoft.EntityFrameworkCore;
 
 namespace AM.Data
@@ -20,6 +21,19 @@ namespace AM.Data
                     Initial Catalog = Airport;  
                     Integrated Security = true");
 
+        }
+
+
+        //tp4 q6
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new flightConfig());
+        }
+        //tp4 q8,9
+        protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
+        {
+            configurationBuilder.Properties<DateTime>()
+                .HaveColumnType("date");
         }
 
     }

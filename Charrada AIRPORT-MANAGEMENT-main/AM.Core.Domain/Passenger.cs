@@ -9,13 +9,30 @@ namespace AM.Core.Domain
 {
     public class Passenger
     {
-        [Key]
+       
+        [Display(Name = "Date of Birth")] //houni9alk sameha
         public DateTime BirthDate { get; set; }
 
+
+        [Key]
+        [MinLength(7, ErrorMessage = "MinLength 7")]
+        [MaxLength(7, ErrorMessage = "MaxLength 7")]
         public string PassportNumber { get; set; }
+
+
+
+        [EmailAddress(ErrorMessage = "une address email invalid .")]//valide
         public string EmailAddress { get; set; }
+
+
+        [MinLength(3, ErrorMessage = "MinLength 3")]
+        [MaxLength(25, ErrorMessage = "MaxLength 25")]
+        public FullName MyFullName { get; set; }//tp4 q 13 9ali badl
+
         public string FirstName { get; set; }
         public string LastName { get; set; }
+
+        [Phone(ErrorMessage = "phone number")]//valide 9alk
         public string TelNumber { get; set; }
         public int Age; //teb3a l 13
 
