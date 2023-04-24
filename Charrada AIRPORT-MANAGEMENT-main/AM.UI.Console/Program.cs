@@ -1,63 +1,80 @@
 ﻿// See https://aka.ms/new-console-template for more information
-//using System.Numerics;
 
 using AM.Core.Domain;
-using AM.Core.Extensions;
-using AM.Core.Services;
+using AM.Data;//zidha tansech
+//using System.Numerics;
 
-//TP1. Question 7
 Console.WriteLine("Hello, World!");
-Plane plane= new Plane();
+
+//TP1. Question 7   initialisé ..
+/*
+Plane plane = new Plane();//constructeur par defaut
 plane.Capacity = 100;
-plane.ManufactureDate = new DateTime(2000,1,1);
+plane.ManufactureDate = new DateTime(2000, 1, 1);
 plane.MyPlaneType = PlaneType.BOING;
-
-//TP1. Question 8  (on utilise ce methode quand il y a des proprietes obligatoires)
-Plane plane2 = new Plane(PlaneType.BOING, 100, new DateTime(2000, 1, 1));
-
-//TP1 Question 9 construire le constructore et l'initialiser (initialiseur d'objet) - plus dynamique
+*/
+//TP1. Question 8 => créer le constructeur paramétré suivant : public Plane (PlaneType pt, int capacity, DateTime date)
+//houni bl par defaut
+Plane plane2 = new Plane (PlaneType.BOING , 55, new DateTime(2000,1,5) );
+//TP1 Question 9 (initialiseur d'objet) tari9a o5ra
 Plane plane3 = new Plane()
 {
-    Capacity= 100,
-    ManufactureDate= new DateTime(2000, 1, 1),
-    MyPlaneType= PlaneType.BOING
+    Capacity = 100,
+    ManufactureDate = new DateTime(2000, 1, 1),
+    MyPlaneType = PlaneType.BOING
 };
 
+//tp1 q13
+
+// create a new Passenger object and set the BirthDate property
 Passenger passenger = new Passenger();
 passenger.BirthDate = new DateTime(1990, 5, 1);
-//passenger.GetAge1();
-Console.WriteLine(passenger.Age);
+
+// call the GetAge1 method to calculate the passenger's age
+passenger.GetAge1(passenger);
+
+// the passenger's age is now stored in the Age property
+Console.WriteLine( passenger.Age);
 
 
-//tp1 question 12.b
-Passenger passanger2 =new Passenger();
-Passenger staff2= new Staff();
-Passenger traveller2 = new Traveller();
-Console.WriteLine(passanger2.GetPassengerType());
-Console.WriteLine(staff2.GetPassengerType());
-Console.WriteLine(traveller2.GetPassengerType());
 
-//tp1 question 13.c
-Passenger passenger3=new Passenger();
-//int calculatedAge = 5;
-//passenger3.GetAge(new DateTime(2000,1,1), ref calculatedAge);
-//Console.WriteLine(calculatedAge);
-passenger3.BirthDate = new DateTime(2000, 1, 1);
-//passenger3.GetAge(passenger3);
-Console.WriteLine(passenger3.Age);
+int age = 0;
+Passenger passenger1 = new Passenger();
+passenger.GetAge2(new DateTime(1990, 5, 1),ref age); //ken nhot ref nzid lkol ref lfn
+Console.WriteLine(age);
 
-//tp2 13.c
-IFlightService.GetScore methode1 = delegate (Passenger p) //calcule par nbr de vol
+
+//bch gadina l bd installina lsql halina l console fl am.data w zedna [key] mbaed Add-Migration,Update-Database
+
+
+//tp3 q8 
+
+Plane plane = new Plane()
 {
-    return p.Flights.Count();
-}; 
-IFlightService.GetScore methode2 = delegate (Passenger p)  // calcule par nbr de vol det et depar tiunisia
-{
-    
-    return p.Flights.Where(f => f.Destination=="Tunisia" 
-                        || f.Departure =="Tunisia" ).Count();
+    Capacity = 10,
+    ManufactureDate = new DateTime(1998, 09, 01, 10, 30, 0),
+    MyPlaneType = PlaneType.AIRBUS
 };
-IFlightService flightService = new FlightService();
-var passengerSenior = flightService.GetSeniorPassenger(methode2);   
-Flight f= new Flight();
-f.GetDelay();
+
+Flight flight = new Flight()
+{
+    Comment = "comment",
+    Departure = "Tunis",
+    Destination = "Algerie",
+    EffectiveArrival = new DateTime(2023, 09, 01, 12, 0, 0),
+    EstimatedDuration = 60,
+    FlightDate = new DateTime(2023, 09, 01, 10, 30, 0),
+    MyPlane = plane
+
+};
+
+
+
+//tp3 q9  Migrer la BDD ajouti migration
+
+AMContext aMContext = new AMContext();//sna3na houni l bd
+aMContext.Add(plane); //addinehom et save
+aMContext.Add(flight);
+aMContext.SaveChanges();
+
+
