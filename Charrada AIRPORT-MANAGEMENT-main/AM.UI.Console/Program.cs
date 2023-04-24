@@ -78,3 +78,7 @@ aMContext.Add(flight);
 aMContext.SaveChanges();
 
 
+//test q15 tp4
+Flight flightQ11 = aMContext.Find<Flight>(2);
+Console.WriteLine(flightQ11);
+Console.WriteLine(flightQ11.MyPlane);

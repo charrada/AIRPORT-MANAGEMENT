@@ -35,6 +35,7 @@ namespace AM.Core.Domain
         [Phone(ErrorMessage = "phone number")]//valide 9alk
         public string TelNumber { get; set; }
         public int Age; //teb3a l 13
+        public virtual IList<Reservation> Reservations { get; set; }
 
 
         public override string ToString()

@@ -16,6 +16,7 @@ namespace AM.Core.Domain
         public DateTime EffectiveArrival { get; set; }
         public int EstimatedDuration { get; set; }
         //les realtions !
+        public virtual IList<Reservation> Reservations { get; set; }
 
         [ForeignKey("MyPlane")]
         public int? PlaneId { get; set; } //prop
