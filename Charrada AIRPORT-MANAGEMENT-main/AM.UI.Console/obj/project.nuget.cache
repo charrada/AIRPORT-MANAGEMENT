@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sl61TjBR+x7G4keEYsM4C3VInsr5omEF38oUT+xHLcU/U41qV4lIWs0ub8aqoJ4FfzwnZEr4sgYxaqeybAroMw==",
+  "dgSpecHash": "fh8sJHDBgdwZIbtcZA6oiXdQCMRSTt8nwDhcKw27b8gyWDBUAsPu8J+Y4mzLMAKIycMskSke9Z0fApaCNgTn2w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\source\\repos\\TP charrada\\AM.UI.Console\\AM.UI.Console.csproj",
+  "projectFilePath": "C:\\Users\\user\\Desktop\\AIRPORT-MANAGEMENT\\Charrada AIRPORT-MANAGEMENT-main\\AM.UI.Console\\AM.UI.Console.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

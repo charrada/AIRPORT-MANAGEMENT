@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZZ42PUGU0oNk1sV4lcFW0oW1vMf0hw8SCsYNnTuR+DbNdQRLrZuibecWysDBXSn4BKD4/gPBysMd2LZrKJs0eA==",
+  "dgSpecHash": "ubriTsacFqtdJZ84SNqZFPIsCIEgEp9xyzsnxioIm+kjgDmUOcfA0FVDjfc80+l6BeuYgsTpPf24yaI/IJhrQg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\source\\repos\\TP charrada\\AM.Core.Domain\\AM.Core.Domain.csproj",
+  "projectFilePath": "C:\\Users\\user\\Desktop\\AIRPORT-MANAGEMENT\\Charrada AIRPORT-MANAGEMENT-main\\AM.Core.Domain\\AM.Core.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.5\\microsoft.entityframeworkcore.7.0.5.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.5\\microsoft.entityframeworkcore.abstractions.7.0.5.nupkg.sha512",
