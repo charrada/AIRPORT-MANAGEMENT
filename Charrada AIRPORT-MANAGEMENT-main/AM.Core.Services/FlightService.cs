@@ -7,10 +7,12 @@ using AM.Core.Domain;
 
 namespace AM.Core.Services
 {
-    public class FlightService : IFlightService
+    //   public class FlightService : IFlightService ,,,, kenet haka da5alna aleha service
+    public class FlightService : Service<Flight>, IFlightService
+
     {
         //tp part2 
-                public IList<Flight> Flights { get; set; } //prop
+        public IList<Flight> Flights { get; set; } //prop
 
 
         //tp part2 q6
