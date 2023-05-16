@@ -19,3 +19,4 @@ namespace AM.Core.Interfaces
         void Save();
     }
 }
+

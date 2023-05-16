@@ -7,28 +7,29 @@ using System.Threading.Tasks;
 
 namespace AM.Data
 {
-    //TP6 --> Q1
     public class Repository<T> : IRepository<T> where T : class
     {
-        AMContext context ;
+        //hatina houni l add delete ..
+
+        AMContext context;
         public Repository(AMContext context)
-        {this.context = context;}
+        { this.context = context; }
         public void Add(T t)
-        {context.Add(t);}
+        { context.Add(t); }
         //TP6 Q10
         //public void Commit()
         //{ context.SaveChanges();}
         public void Delete(T t)
-        {context.Remove(t);}
+        { context.Remove(t); }
         public T Get(int id)
-        {return (T)(context.Find(typeof(T),id));}
+        { return (T)(context.Find(typeof(T), id)); }
         public T Get(string id)
-        {return (T)(context.Find(typeof(T), id));}
+        { return (T)(context.Find(typeof(T), id)); }
         public IList<T> GetAll()
-        {return context.Set<T>().ToList();}
+        { return context.Set<T>().ToList(); }
         public void Update(T t)
-        {context.Update(t);}
+        { context.Update(t); }
     }
-    
+
     
 }

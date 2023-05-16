@@ -1216,11 +1216,22 @@
           "bin/placeholder/AM.Core.Domain.dll": {}
         }
       },
+      "AM.Core.Interfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/AM.Core.Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AM.Core.Interfaces.dll": {}
+        }
+      },
       "AM.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "AM.Core.Domain": "1.0.0",
+          "AM.Core.Interfaces": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.5",
           "Microsoft.EntityFrameworkCore.Proxies": "7.0.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5"
@@ -3625,6 +3636,11 @@
       "type": "project",
       "path": "../AM.Core.Domain/AM.Core.Domain.csproj",
       "msbuildProject": "../AM.Core.Domain/AM.Core.Domain.csproj"
+    },
+    "AM.Core.Interfaces/1.0.0": {
+      "type": "project",
+      "path": "../AM.Core.Interfaces/AM.Core.Interfaces.csproj",
+      "msbuildProject": "../AM.Core.Interfaces/AM.Core.Interfaces.csproj"
     },
     "AM.Data/1.0.0": {
       "type": "project",

@@ -3,15 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AM.UI.Console", "AM.UI.Console\AM.UI.Console.csproj", "{0376719B-AAC8-49A5-B6E4-584ABAFB9B9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AM.UI.Console", "AM.UI.Console\AM.UI.Console.csproj", "{0376719B-AAC8-49A5-B6E4-584ABAFB9B9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AM.Core.Domain", "AM.Core.Domain\AM.Core.Domain.csproj", "{0EEF31EC-4DB1-4DBE-923F-9FA0A2A51FA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AM.Core.Domain", "AM.Core.Domain\AM.Core.Domain.csproj", "{0EEF31EC-4DB1-4DBE-923F-9FA0A2A51FA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AM.Core.Services", "AM.Core.Services\AM.Core.Services.csproj", "{0E48EE58-175A-4178-A193-98D46F6B1B86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AM.Core.Services", "AM.Core.Services\AM.Core.Services.csproj", "{0E48EE58-175A-4178-A193-98D46F6B1B86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AM.Core.Extensions", "AM.Core.Extensions\AM.Core.Extensions.csproj", "{2EB990C8-A322-4DE7-9DCA-254CCBC54464}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AM.Core.Extensions", "AM.Core.Extensions\AM.Core.Extensions.csproj", "{2EB990C8-A322-4DE7-9DCA-254CCBC54464}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AM.Data", "AM.Data\AM.Data.csproj", "{78AD1591-C4A8-4722-B30D-D5CF506B0338}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AM.Data", "AM.Data\AM.Data.csproj", "{78AD1591-C4A8-4722-B30D-D5CF506B0338}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AM.Core.Interfaces", "AM.Core.Interfaces\AM.Core.Interfaces.csproj", "{EB1B2919-472F-4E1F-BFB0-ECDE5FDB8407}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AM.UI.WEB", "AM.UI.WEB\AM.UI.WEB.csproj", "{FE2F956E-13FE-4548-B369-5ECA1974DCE0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{78AD1591-C4A8-4722-B30D-D5CF506B0338}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78AD1591-C4A8-4722-B30D-D5CF506B0338}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78AD1591-C4A8-4722-B30D-D5CF506B0338}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB1B2919-472F-4E1F-BFB0-ECDE5FDB8407}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB1B2919-472F-4E1F-BFB0-ECDE5FDB8407}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB1B2919-472F-4E1F-BFB0-ECDE5FDB8407}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB1B2919-472F-4E1F-BFB0-ECDE5FDB8407}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE2F956E-13FE-4548-B369-5ECA1974DCE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE2F956E-13FE-4548-B369-5ECA1974DCE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE2F956E-13FE-4548-B369-5ECA1974DCE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE2F956E-13FE-4548-B369-5ECA1974DCE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
