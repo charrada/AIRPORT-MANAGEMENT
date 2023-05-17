@@ -1,7 +1,21 @@
+using AM.Core.Services;
+using Microsoft.EntityFrameworkCore;
+using AM.Data;
+using AM.Core.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+//hedhom 9ali zidhom les dependence! tansech les imports ...
+
+builder.Services.AddScoped<IFlightService, FlightService>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddDbContext<DbContext, AMContext>();
+builder.Services.AddScoped<IPlaneService, PlaneService>();
+
+
 
 var app = builder.Build();
 

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AM.Core.Domain;
+using AM.Core.Interfaces;
 
 namespace AM.Core.Services
 {
@@ -11,6 +12,15 @@ namespace AM.Core.Services
     public class FlightService : Service<Flight>, IFlightService
 
     {
+        public FlightService(IUnitOfWork unitOfWork) : base(unitOfWork)  //hedhi lazem tethat obligatoire
+        {
+
+            //TP6 Question 12 
+            Flights = GetAll();
+            //this.unitOfWork = unitOfWork;
+            //repository = unitOfWork.GetRepository<Flight>();
+        }
+
         //tp part2 
         public IList<Flight> Flights { get; set; } //prop
 

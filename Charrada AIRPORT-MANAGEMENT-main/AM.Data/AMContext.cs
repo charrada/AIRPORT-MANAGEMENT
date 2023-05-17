@@ -38,3 +38,10 @@ namespace AM.Data
 
     }
 }
+
+namespace AM.Data
+{
+    public class AMContext
+    {
+    }
+}
